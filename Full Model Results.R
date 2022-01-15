@@ -1,3 +1,4 @@
+# Input Model Configuration
 config <- "model_configuration.xlsx"
 
 # Load Data
@@ -44,9 +45,10 @@ export.model.data <- data.frame(Time = dv.data$Time, model.data)
 model.data.ts <- ts(model.data, start = c(year(start.date), quarter(start.date)), 
                     end = c(year(end.date), quarter(end.date)), frequency = 4)
 
-# Model Selection
+# Model Selection - run DV against all IVs
 full.model <- lm(DV~., data = model.data, na.action = "na.fail")
-#step.model <- stepAIC(full.model, direction = "both", trace = 0)
+
+# Run all possible variations of models, ranking by AIC
 model.combinations <- dredge(full.model, m.lim = c(1,3), extra = list("*" = function(x) { s <- summary(x)
 c(Rsq = s$r.squared, adjRsq = s$adj.r.squared, F = s$fstatistic[[1]])}))
 
