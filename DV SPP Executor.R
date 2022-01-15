@@ -24,11 +24,3 @@ selected.models <-  c(1:10)
 source("Selected Model Results.R")
 source("Reporting.R")
 report_selected_models()
-
-# Sample ggplot
-fit.plot <- melt(data.table(export.forecast), id.vars = "Time")
-fit.plot <- ggplot(fit.plot, aes(x = Time, y = value, color = variable)) +
-  geom_line() + 
-  scale_color_manual(values=c("black","red")) + 
-  labs(y = "Price", color = "")
-
