@@ -1,4 +1,3 @@
-
 model.output <- get.models(model.combinations, subset=TRUE)[rownames(dredge.export[selected.models,])]
 selected.model.summary <- dredge.export[selected.models,]
 
@@ -18,8 +17,6 @@ get_errors <- c()
     get_errors <- rbind(get_errors, error)
   }
 
-# selected.model.summary <- selected.model.summary[,-c(which(names(selected.model.summary) == c("F", "df")),
-#                            which(names(selected.model.summary) == c("logLik", "AICc")))]
 selected.model.summary <- cbind(selected.model.summary, get_pval, get_errors)
 selected.model.summary <- selected.model.summary[,!apply(selected.model.summary, 2, function(var) length(unique(var)) == 1)]
 
