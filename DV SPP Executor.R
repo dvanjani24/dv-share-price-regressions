@@ -12,7 +12,7 @@ library = c(
   "rugarch","tsfknn","MLmetrics", "finreportr", "devtools", "XBRL", "readxl",
   "MASS", "leaps", "caret", "MuMIn", "openxlsx")
 
-libraries <- c("readxl", "openxlsx", "lubridate", "data.table", "dplyr", "MuMIn")
+libraries <- c("readxl", "openxlsx", "lubridate", "data.table", "dplyr", "MuMIn","xts")
 suppressWarnings(lapply(libraries, require, character.only = TRUE))
 
 # Full-model examination
