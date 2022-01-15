@@ -8,7 +8,7 @@ As an avid investor and statistics geek, I enjoy exploring quantitative methods 
 The models are calibrated using quarterly data, as generally internal company-level metrics (e.g., earnings) are reported quarterly through earnings releases. Based on this, any inferences made on future stock performance should be aligned to the frequency of the historical data. Therefore, using regressions such as the ones explored in this project to predict day-to-day moves in stock prices would not make much sense. But for longer term investors, regressions against key macro/internal variables can certainly support the long-run trend of a stock's share price. 
 
 ## Functionality:
-1. The program consumes a model configuration template containing dependent variable (i.e., share price) and independent variable data (i.e., macro/internal variables). Below are a subset of the independent variables considered.
+1. The program consumes a model configuration template containing dependent variable (i.e., share price) and independent variable data (i.e., macro/internal variables). Below is a subset of the independent variables considered:
 
 Macroeconomic variables  | Internal company-level variables
 ------------- | -------------
