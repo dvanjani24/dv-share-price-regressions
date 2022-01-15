@@ -42,3 +42,5 @@ Libraries:
   - dplyr
   - xts
 
+## Future Improvements
+A key limitation of this program is that it relies quite heavily on manual data sourcing. As a future enhancement, I can further automate the data sourcing of the model variables and eliminate the need for a model configuration template.
